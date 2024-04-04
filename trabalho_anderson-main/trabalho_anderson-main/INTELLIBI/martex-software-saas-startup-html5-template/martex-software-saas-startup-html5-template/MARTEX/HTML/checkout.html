@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DSAThemes">
+    <meta name="description" content="Martex - Software, App, SaaS & Startup Landing Pages Pack">
+    <meta name="keywords" content="Responsive, HTML5, DSAThemes, Landing, Software, Mobile App, SaaS, Startup, Creative, Digital Product">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- SITE TITLE -->
+    <title>Intelli.BI - Soluções em Análise de Dados e BI</title>
+
+    <!-- FAVICON AND TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="images/apple-touch-icon.png" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT ICONS -->
+    <link href="css/flaticon.css" rel="stylesheet">
+
+    <!-- PLUGINS STYLESHEET -->
+    <link href="css/menu.css" rel="stylesheet">
+    <link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/lunar.css" rel="stylesheet">
+
+    <!-- ON SCROLL ANIMATION -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- TEMPLATE CSS -->
+    <link href="css/blue-theme.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS FOR WRAPPER -->
+    <style>
+        .checkout-wrapper {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .checkout-form-title {
+            background-color: #f8f9fa;
+            color: #000000;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .checkout-form-title h3 {
+            margin: 0;
+        }
+
+        .checkout-form {
+            margin-top: 20px;
+        }
+
+        .checkout-form input,
+        .checkout-form button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PAGE CONTENT -->
+    <div id="page" class="page font--jakarta">
+        <!-- CHECKOUT PAGE -->
+        <div id="checkout" class="bg--fixed checkout-section division">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                        <div class="checkout-wrapper">
+                            <div class="checkout-page-form">
+                                <!-- TITLE -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-title">
+                                        <h3 class="s-32 w-700">Checkout</h3>
+                                        <p class="p-md">Detalhes do pagamento</p>
+                                    </div>
+                                </div>
+                                <!-- CHECKOUT FORM -->
+                                <form name="checkoutform" class="row checkout-form">
+                                    <input type="hidden" id="productValue" value="39.99">
+
+                                    <!-- Form Inputs -->
+                                    <div class="col-md-12">
+                                        <p class="p-sm input-header">Nome do Titular do Cartão</p>
+                                        <input class="form-control card-holder" type="text" name="cardHolder" 
+                                            placeholder="Nome do Titular" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p class="p-sm input-header">Número do Cartão</p>
+                                        <input class="form-control card-number" type="text" name="cardNumber"
+                                            placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p class="p-sm input-header">Data de Expiração</p>
+                                        <input class="form-control expiry-date" type="text" name="expiryDate"
+                                            placeholder="MM/AA" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p class="p-sm input-header">CVV</p>
+                                        <input class="form-control cvv" type="text" name="cvv" placeholder="123"
+                                            required>
+                                    </div>
+                                    <!-- Form Submit Button -->
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn--theme hover--theme submit"
+                                            onclick="processPayment()">Processar Pagamento</button>
+                                    </div>
+                                </form>
+                                <!-- END CHECKOUT FORM -->
+                            </div>
+                        </div>
+                        <!-- Fim do wrapper -->
+                    </div>
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- END CHECKOUT PAGE -->
+    </div>
+    <!-- END PAGE CONTENT -->
+
+    <!-- EXTERNAL SCRIPTS -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/pricing-toggle.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/lunar.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cardHolderInput = document.querySelector('input[name="cardHolder"]');
+            const cardNumberInput = document.querySelector('input[name="cardNumber"]');
+            const expiryDateInput = document.querySelector('input[name="expiryDate"]');
+            const cvvInput = document.querySelector('input[name="cvv"]');
+    
+            // Adiciona um ouvinte de evento de entrada para o nome do titular
+            cardHolderInput.addEventListener('input', function () {
+                formatCardHolderName(this);
+            });
+    
+            // Adiciona um ouvinte de evento de entrada para o número do cartão
+            cardNumberInput.addEventListener('input', function () {
+                formatCreditCardNumber(this);
+            });
+    
+            // Adiciona um ouvinte de evento de entrada para a data de expiração
+            expiryDateInput.addEventListener('input', function () {
+                formatExpiryDate(this);
+            });
+    
+            // Adiciona um ouvinte de evento de entrada para o CVV
+            cvvInput.addEventListener('input', function () {
+                formatCVV(this);
+            });
+    
+            // Função para formatar o nome do titular (permite letras e espaços)
+            function formatCardHolderName(input) {
+                input.value = input.value.replace(/[^a-zA-Z\s]/g, ''); // Remove caracteres não alfabéticos e não espaços
+            }
+    
+            // Função para formatar o número do cartão (insere espaços a cada 4 dígitos)
+            function formatCreditCardNumber(input) {
+                let trimmedValue = input.value.replace(/\s+/g, ''); // Remove espaços em branco existentes
+                let formattedValue = '';
+    
+                // Permitir apenas números e limitar a 16 dígitos
+                trimmedValue = trimmedValue.replace(/\D/g, '').slice(0, 16);
+    
+                for (let i = 0; i < trimmedValue.length; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        formattedValue += ' '; // Insere um espaço a cada 4 dígitos
+                    }
+                    formattedValue += trimmedValue[i];
+                }
+    
+                input.value = formattedValue;
+            }
+    
+            // Função para formatar a data de expiração (insere a barra após 2 dígitos e permite apenas 4 dígitos)
+            function formatExpiryDate(input) {
+                let trimmedValue = input.value.replace(/\s+/g, ''); // Remove espaços em branco existentes
+                let formattedValue = '';
+    
+                // Permitir apenas números e limitar a 4 dígitos
+                trimmedValue = trimmedValue.replace(/\D/g, '').slice(0, 4);
+    
+                for (let i = 0; i < trimmedValue.length; i++) {
+                    if (i === 2) {
+                        formattedValue += '/'; // Insere a barra após 2 dígitos
+                    }
+                    formattedValue += trimmedValue[i];
+                }
+    
+                input.value = formattedValue;
+            }
+    
+            // Função para formatar o CVV (permite apenas 3 dígitos)
+            function formatCVV(input) {
+                let trimmedValue = input.value.replace(/\D/g, ''); // Remove não dígitos
+                input.value = trimmedValue.slice(0, 3); // Limita a 3 dígitos
+            }
+        });
+    </script>
+    <script>
+        function processPayment() {
+            console.log('Função processPayment chamada!');
+            Swal.fire({
+                title: 'Sucesso!',
+                text: 'O pagamento foi processado com sucesso!',
+                icon: 'success',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'demo-5.html';
+                }
+            });
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var selectedPlan = getParameterByName('plan');
+        var selectedPrice = getParameterByName('price');
+
+        if (selectedPlan && selectedPrice) {
+        document.getElementById('productValue').value = selectedPrice;
+        document.getElementById('selectedPlan').innerText = selectedPlan;
+        document.getElementById('selectedPrice').innerText = 'R$ ' + selectedPrice;
+        }
+        function processPayment() {
+            // Obtenha os dados do formulário
+            const cardHolder = document.querySelector('input[name="cardHolder"]').value;
+            const cardNumber = document.querySelector('input[name="cardNumber"]').value;
+            const expiryDate = document.querySelector('input[name="expiryDate"]').value;
+            const cvv = document.querySelector('input[name="cvv"]').value;
+            console.log('Nome do Titular:', cardHolder);
+
+            // Faça a solicitação POST para o back-end
+            fetch('http://localhost:3000/pagamentos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    cardHolder,
+                    cardNumber,
+                    expiryDate,
+                    cvv,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Resposta do servidor:', data);
+                Swal.fire({
+                    title: 'Sucesso!',
+                    text: 'O pagamento foi processado com sucesso!',
+                    icon: 'success',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'demo-5.html';
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao processar pagamento:', error);
+                Swal.fire({
+                    title: 'Erro',
+                    text: 'Ocorreu um erro ao processar o pagamento. Tente novamente.',
+                    icon: 'error',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
+
